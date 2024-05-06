@@ -16,3 +16,6 @@ async def wait_random(max_delay=10):
     await asyncio.sleep(delay)
 
     return delay
+
+if __name__ == "__main__":
+    asyncio.run(wait_random())
