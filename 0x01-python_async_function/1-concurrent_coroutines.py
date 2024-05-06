@@ -21,6 +21,3 @@ async def wait_n(n: int, max_delay: int) -> list:
                 delays[i], delays[j] = delays[j], delays[i]
 
     return delays
-
-if __name__ == "__main__":
-    asyncio.run(wait_n())
