@@ -4,14 +4,15 @@ import asyncio
 import random
 
 
-wait_random = __import__('0-basic_async_syntax').wait_random
-
-
 async def wait_n(n: int, max_delay: int) -> list:
     """
      An asynchronous coroutine that spawns wait_random n times with the
      specified max_delay and returns a list of all the delays in
     """
+
+    module_name = "0-basic_async_syntax"
+    module = __import__(module_name)
+    wait_random = module.wait_random
 
     delays = await asyncio.gather(*(wait_random(max_delay) for _ in range(n)))
 
