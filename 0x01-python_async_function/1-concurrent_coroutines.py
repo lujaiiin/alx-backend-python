@@ -9,7 +9,7 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 async def wait_n(n: int, max_delay: int) -> list:
     """
-    An asynchronous coroutine that spawns wait_random n times with the specified max_delay and returns a list of all the delays in ascending order.
+    An asynchronous coroutine that spawns wait_random n times with
 
     Parameters:
     - n (int): Number of times to spawn wait_random.
