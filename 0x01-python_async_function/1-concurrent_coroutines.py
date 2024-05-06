@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """modules"""
 import asyncio
 import random
@@ -9,8 +9,14 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 async def wait_n(n: int, max_delay: int) -> list:
     """
-     An asynchronous coroutine that spawns wait_random n times with the
-     specified max_delay and returns a list of all the delays in
+    An asynchronous coroutine that spawns wait_random n times with the specified max_delay and returns a list of all the delays in ascending order.
+
+    Parameters:
+    - n (int): Number of times to spawn wait_random.
+    - max_delay (int): Maximum delay in seconds for each wait_random instance.
+
+    Returns:
+    - list: A list of delays in ascending order.
     """
 
     delays = await asyncio.gather(*(wait_random(max_delay) for _ in range(n)))
