@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git add .
+git commit -m "The basics of async"
+git push
