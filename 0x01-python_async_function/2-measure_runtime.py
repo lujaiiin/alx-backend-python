@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """modules"""
 
-
 from time import time
 from asyncio import run
 
