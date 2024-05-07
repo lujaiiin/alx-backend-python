@@ -6,7 +6,7 @@ import asyncio
 from typing import List
 
 
-async def async_generator() -> List[float]:
+async def async_generator() -> List[float, None, None]:
     """ async generator function """
 
     for _ in range(10):
